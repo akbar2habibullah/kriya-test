@@ -18,9 +18,6 @@ const StyledCard = styled(Card)<StyledCardProps>`
 
 const TaskboardItemCardTitle = styled(Typography.Title)`
   white-space: pre-wrap;
-  // To make ellipsis of the title visible.
-  // Without this margin, it can be go behind the "extra" component.
-  // So, we give it a little space.
   margin-right: 0.25rem;
 `;
 
@@ -52,10 +49,6 @@ function TaskboardItemCard({
       size="small"
       title={
         <BaseTooltip overlay={item.title}>
-          {/* styled(Typography.Title) throws an error in console about 
-          forwarding ref in function components.
-          Because Typography.Title doesn't accept a ref.
-          So, we just placed a span tag here. */}
           <span>
             <TaskboardItemCardTitle level={5} ellipsis={{ rows: 2 }}>
               {item.title}

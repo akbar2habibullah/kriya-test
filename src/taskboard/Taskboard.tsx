@@ -46,7 +46,6 @@ function Taskboard() {
   }) => {
     setItemsByStatus((current) =>
       produce(current, (draft) => {
-        // dropped outside the list
         if (!destination) {
           return;
         }
@@ -132,7 +131,6 @@ function Taskboard() {
           setItemsByStatus((current) =>
             produce(current, (draft) => {
               if (itemToEdit) {
-                // Editing existing item
                 const draftItem = Object.values(draft)
                   .flatMap((items) => items)
                   .find((item) => item.id === itemToEdit.id);
@@ -141,7 +139,6 @@ function Taskboard() {
                   draftItem.description = values.description;
                 }
               } else if (itemStatus) {
-                // Adding new item as "to do"
                 draft[itemStatus].push({
                   ...values,
                   id: generateId(),

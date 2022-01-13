@@ -25,7 +25,6 @@ function TaskboardItemFormModal({
 
   useEffect(() => {
     if (visible) {
-      // Focus on the first input when the modal is opened
       inputRef.current?.focus();
       form.resetFields();
     }
@@ -36,7 +35,6 @@ function TaskboardItemFormModal({
       title="Add Item"
       visible={visible}
       destroyOnClose
-      // To make dynamically changing initialValues work with Form
       forceRender
       onCancel={onCancel}
       onOk={() => form.submit()}

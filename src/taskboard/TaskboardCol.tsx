@@ -11,8 +11,6 @@ const TaskboardColRoot = styled(Card)`
   margin: 0.5rem;
   display: flex;
   flex-direction: column;
-  // To force each flex item to have equal width
-  // even if they have long texts with no spaces etc.
   min-width: 0;
   > .ant-card-body {
     overflow: hidden;

@@ -1,7 +1,6 @@
 import { goTrySync } from 'go-try';
 import React, { useCallback, useEffect, useState } from 'react';
 
-// Syncs state to localStorage and vice versa
 export function useSyncedState<T>(
   key: string,
   initialValue: T
