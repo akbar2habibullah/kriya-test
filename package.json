@@ -1,8 +1,6 @@
 {
-  "name": "drag-and-drop-taskboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://onderonur.github.io/drag-and-drop-taskboard/",
   "dependencies": {
     "@ant-design/colors": "^6.0.0",
     "@ant-design/icons": "^4.6.2",
